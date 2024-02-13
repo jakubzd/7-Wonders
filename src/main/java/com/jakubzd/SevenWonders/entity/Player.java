@@ -1,11 +1,14 @@
 package com.jakubzd.SevenWonders.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+@Data
 @Entity
+@Table(name = "players")
 public class Player {
 
     @Id

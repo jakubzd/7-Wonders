@@ -2,12 +2,11 @@ package com.jakubzd.SevenWonders.entity;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Entity
+@Table(name = "games_logs")
 public class GameLog {
 
     @Id

@@ -3,6 +3,7 @@ package com.jakubzd.SevenWonders.entity;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "players_game_info")
 public class PlayerGameInfo {
 
     @Id

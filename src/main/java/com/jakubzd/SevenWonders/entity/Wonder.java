@@ -3,7 +3,8 @@ package com.jakubzd.SevenWonders.entity;
 import jakarta.persistence.*;
 
 @Entity
-public class WorldWonder {
+@Table(name = "wonders")
+public class Wonder {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
