@@ -18,6 +18,7 @@ public class PlayerGameInfo {
     private Player player;
     @Column(name = "score")
     private int score;
-    @Column(name = "city")
-    private String city;
+    @ManyToOne
+    @JoinColumn(name = "wonder_id")
+    private Wonder wonder;
 }

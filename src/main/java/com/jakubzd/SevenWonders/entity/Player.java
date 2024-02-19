@@ -1,6 +1,7 @@
 package com.jakubzd.SevenWonders.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.LinkedHashSet;
@@ -8,6 +9,7 @@ import java.util.Set;
 
 @Data
 @Entity
+@AllArgsConstructor
 @Table(name = "players")
 public class Player {
 
