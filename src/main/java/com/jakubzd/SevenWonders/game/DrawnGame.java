@@ -25,7 +25,7 @@ public class DrawnGame {
         playerWonderMap = drawWonders(players, wonders);
     }
 
-    public static Map<Player, Wonder> drawWonders(final List<Player> players, final List<Wonder> wonders) {
+    public Map<Player, Wonder> drawWonders(final List<Player> players, final List<Wonder> wonders) {
         Map<Player, Wonder> map = new LinkedHashMap<>();
         Collections.shuffle(players);
         Collections.shuffle(wonders);
@@ -37,7 +37,7 @@ public class DrawnGame {
     }
 
     List<Wonder> getAllWonders(final List<Expansion> expansions) {
-        final List<Wonder> wonders = repository.findByExpansion(null);
+        final List<Wonder> wonders = new ArrayList<>(repository.findByExpansion(null));
         if (expansions != null) {
             for(final Expansion expansion : expansions) {
                 wonders.addAll(expansion.getWonders());
