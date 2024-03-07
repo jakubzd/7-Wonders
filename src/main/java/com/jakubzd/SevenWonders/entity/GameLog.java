@@ -1,16 +1,19 @@
 package com.jakubzd.SevenWonders.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Data
 @Entity
 @Table(name = "games_logs")
 public class GameLog {
 
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinTable(name = "player_game_info_mapping",
